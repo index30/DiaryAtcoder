@@ -1,24 +1,25 @@
-def calc_way(A, B, C, X):
-    if (500 * A + 100 * B + 50 * C) < X:
-        return 0
-    # mul500 = X // 500
-    # result500 = X - 500 * mul500
-    # mul100 = result500 // 100
-    # result100 = result500 - 100 * mul100
-    # mul50 = result100 // 50
-    # result50 = result100 - 50 * mul50
-    # if result50 > 0:
-    #     pass
+def calc_result(A, B, C, X):
+    count = 0
+    result = X
+    a_range_num = min(int(X/500), A) + 1
+    for sa in range(a_range_num):
+        sa_result = result
+        b_range_num = min(int(result/100), B) + 1
+        for sb in range(b_range_num):
+            sb_result = sa_result
+            c_range_num = min(int(sb_result/50), C) + 1
+            for sc in range(c_range_num):
+                if sb_result - (sc * 50) == 0:
+                    count += 1
+            sa_result -= 100
+        result -= 500
+    return count
 
 
 def main():
-    A = int(input())
-    B = int(input())
-    C = int(input())
-    X = int(input())
-    result500 = X // 500
-    result100 = result500 // 100
-    result50 = result100 // 50
+    A, B, C, X = [int(input()) for _ in range(4)]
+    result = calc_result(A, B, C, X)
+    print(result)
 
 
 if __name__ == "__main__":
