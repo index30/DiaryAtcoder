@@ -1,29 +1,19 @@
 # WA。ちょうどN枚になる必要がある
+def judge_eq(x, y, z, Y):
+    if (10000 * x + 5000 * y + 1000 * z) == Y:
+        return True
+    return False
+
 
 def main():
     N, Y = list(map(int, input().split()))
-    count_N = N
-    x_count, y_count, z_count = 0, 0, 0
-    rest_Y = Y
-    while count_N >= 0:
-        if rest_Y >= 10000:
-            rest_Y = rest_Y - 10000
-            x_count += 1
-        elif (rest_Y < 10000) and (rest_Y >= 5000):
-            rest_Y = rest_Y - 5000
-            y_count += 1
-        elif (rest_Y < 5000) and (rest_Y >= 1000):
-            rest_Y = rest_Y - 1000
-            z_count += 1
-        elif (rest_Y < 1000) and (rest_Y > 0):
-            print("-1 -1 -1")
-        else:
-            print("{} {} {}".format(x_count, y_count, z_count))
-            break
-        count_N -= 1
-    if rest_Y > 0:
-        print("-1 -1 -1")
-    if (x_count + y_count + z_count) > N:
+    count = 0
+    for x in range(N+1):
+        for y in range(N-x+1):
+            if judge_eq(x, y, N-x-y, Y) and count == 0:
+                count = 1
+                print("{} {} {}".format(x, y, N-x-y))
+    if count == 0:
         print("-1 -1 -1")
 
 
