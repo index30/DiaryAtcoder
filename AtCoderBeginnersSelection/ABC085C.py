@@ -1,4 +1,3 @@
-# WA。ちょうどN枚になる必要がある
 def judge_eq(x, y, z, Y):
     if (10000 * x + 5000 * y + 1000 * z) == Y:
         return True
