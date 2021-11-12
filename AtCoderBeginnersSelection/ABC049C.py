@@ -6,7 +6,10 @@ def main():
         tmp_S = S[S_pos:S_pos+5]
         if tmp_S == "dream":
             if S[S_pos+5:S_pos+7] == "er":
-                S_pos = S_pos + 7
+                if S[S_pos+7] == "a":
+                    S_pos = S_pos + 5
+                else:
+                    S_pos = S_pos + 7
             else:
                 S_pos = S_pos + 5
         elif tmp_S == "erase":
@@ -17,7 +20,7 @@ def main():
         else:
             NG_flg += 1
             break
-    if NG_flg:
+    if NG_flg or len(S) < 5:
         print("NO")
     else:
         print("YES")
