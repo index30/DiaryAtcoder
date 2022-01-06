@@ -15,9 +15,9 @@ AtCoderBeginnersが終了したので、関連する問題をピックアップ�
     - [x] ABC 048 B	
 - 状態がループするシミュレーション処理
     - [x] ABC 060 B
-    - [ ] ABC 065 B
+    - [x] ABC 065 B
 - 累積和
-    - [ ] ABC 087 C
+    - [x] ABC 087 C
     - [ ] ABC 098 C
 - bit 全探索
     - [ ] ABC 079 C
