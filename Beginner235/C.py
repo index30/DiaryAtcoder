@@ -1,15 +1,18 @@
 # TLE
-import sys
-input = sys.stdin.readline
+from collections import defaultdict
 
 
 def main():
-    _, Q = list(map(int, input().split()))
+    N, Q = list(map(int, input().split()))
     a_list = list(map(int, input().split()))
 
-    a_dict = {}
-    for a in set(a_list):
-        a_dict[a] = [i for i, x in enumerate(a_list) if x == a]
+    a_dict = defaultdict(list)
+
+    for i in range(N):
+        a_dict[a_list[i]].append(i)
+
+    # for a in set(a_list):
+    #     a_dict[a] = [i for i, x in enumerate(a_list) if x == a]
 
     for q in range(Q):
         query = list(map(int, input().split()))
