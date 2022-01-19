@@ -18,6 +18,6 @@ AtCoderBeginnersが終了したので、関連する問題をピックアップ�
     - [x] ABC 065 B
 - 累積和
     - [x] ABC 087 C
-    - [ ] ABC 098 C
+    - [x] ABC 098 C
 - bit 全探索
-    - [ ] ABC 079 C
+    - [x] ABC 079 C
