@@ -1,7 +1,7 @@
 # 競プロ典型90問
 [リンク](https://atcoder.jp/contests/typical90/tasks)
 
-- [ ] 001
+- [ ] [001](https://atcoder.jp/contests/typical90/tasks/typical90_a)
 - [ ] 002
 - [ ] 003
 - [ ] 004
